@@ -34,15 +34,22 @@
   display: flex;
   padding: 5% 10%;
 }
-.grid-row-item {
+
+.grid-row-item, .grid-row-item-big {
   width: 100%;
-  background-color: var(--page-background);
+  background-color: white;
   margin: 16px;
-  padding: 32px;
   border-radius: 16px;
+  padding: 32px;
+  position: relative;
+}
+
+.grid-row-item-big {
+  background: linear-gradient(to top, white 80%, var(--yellow) 20%);
 }
 
 /* ESTILOS DOS CARDS */
+
 .card-title {
   font-weight: 700;
   font-size: 18px;
@@ -74,8 +81,6 @@
   font-weight: 600;
   color: var(--gray);
   margin-top: 16px;
-  /* border-bottom: 1px solid var(--gray); */
-  /* padding-bottom: 16px; */
 }
 
 .divider {
@@ -113,6 +118,40 @@
   color: var(--blue);
   margin-top: 64px;
   border-radius: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+.grid-row-item-big > .card-title {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+  margin-top: 6px;
+  color: var(--blue);
+}
+
+.card-title-label {
+  background-color: var(--blue);
+  text-align: center;
+  padding: 8px 24px;
+  font-size: 12px;
+  border-radius: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.grid-row-item-big > .card-button {
+  background-color: var(--blue);
+  color: white;
+}
+
+.grid-row-item-big > .price-div {
+  margin-top: 48px;
+}
+
+.card-title-div {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 300px) and (max-width: 700px)
